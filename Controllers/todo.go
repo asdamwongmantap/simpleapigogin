@@ -127,7 +127,7 @@ func DeleteTodo(c *gin.Context) {
 
 func LoginTodo(c *gin.Context) {
 	var todo MTD.TodoModel
-	var titletdm MTD.TodoModel
+	var titletdm MTD.LoginTodoModel
 	// todoID := c.Param("id")
 	// todotitle := c.Param("title")
 	c.BindJSON(&titletdm)
@@ -149,6 +149,7 @@ func LoginTodo(c *gin.Context) {
 		c.JSON(http.StatusOK, gin.H{"statusaja": "tidak sesuai"})
 		return
 	}
+	// c.JSON(http.StatusOK, gin.H{"statusaja": "sesuai"})
 
 	// completed := false
 	// if todo.Completed == 1 {

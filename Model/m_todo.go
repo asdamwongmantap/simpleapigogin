@@ -14,6 +14,11 @@ import (
 // }
 type (
 	// todoModel describes a todoModel type
+	LoginTodoModel struct {
+		
+		Title string 
+		Completed int 
+	}
 	TodoModel struct {
 		gorm.Model
 		Title string `json:"title"`
